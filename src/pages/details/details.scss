@@ -1,0 +1,85 @@
+page-details {
+ 
+    // .item{
+    //     margin-bottom: 2%;
+    //     border: 0.5px solid black;
+       
+       
+      
+    //     }
+
+    //     .fst{
+    //         border: 0px solid black;
+    //         margin-bottom: 10px;
+    //         padding: 2px;
+    //     }
+    //     .fstcolor{
+    //         background-color: #3a54a3;
+    //         padding: 2px;
+    //         color: white;
+    //     }
+    //     p{
+    //         margin: 1px;
+    //         padding: 1px;
+    //         color: rgb(68, 65, 65) !important;
+    //     }
+    //     .item-md{
+    //         padding-left: 0px;
+    //     }
+    //      .label-md{
+    //         margin: 0px !important;
+    //     }
+    //     .item-md.item-block .item-inner{
+    //         padding-right: 0px;
+    //     }
+    .item-input .label-md, .item-select .label-md, .item-datetime .label-md{
+        color:black;
+   }
+   .label-md{
+       color:black;
+   }
+   .item-md{
+       background-color: rgb(237, 241, 241) !important;
+       //  background-color: #a5a19e !important;
+       // 
+   }
+   .col{
+       padding-left: 0px;
+       padding-right: 0px;
+   }
+   .card-md{
+       // background-color: #fabe91 !important;
+   }
+   ion-content{
+       // background-color: #beb8b8;
+       // background-image: linear-gradient(315deg, #a89f9f 0%, #dfd7d7 74%);
+     
+   }
+   // ion-card{
+   //     opacity: 0.9;
+   // }
+
+   .item.item-md .checkbox-md {
+       position: static;
+       display: block;
+       // margin: 9px 170px 9px 4px;
+   }
+
+   #but {
+  background-color: #3ea949;
+}
+ion-label[fixed]{
+   min-width: 170px;
+}
+.news
+.label-md{
+   text-align: end;
+}
+.alert-md .alert-head {
+    text-align: left;
+    text-align: start;
+    padding: 24px 24px 20px;
+    background-color: #3856a6;
+    color: white;
+}
+}

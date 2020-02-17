@@ -1,0 +1,226 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.headerimage{
+  img{
+      width: 40%;
+      margin:10px;
+  }
+}
+
+
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+
+// .tabs-md .tab-button {
+//     color: rgb(240, 241, 245) !important;
+//    }
+
+
+ion-content{
+  background-color:white!important;
+}
+
+
+// .my-menu {
+//   background-color: #3f4041;
+//   }
+
+.my-menu, .my-menu .item, .my-menu .item-content, .my-menu .item-complex{
+  // border-color: rgba(0, 0, 0, 0);
+  // background-color: rgba(0, 0, 0, 0.719) !important;
+  // color: white;
+}
+.md .menu-inner{
+  background: none;
+  
+  width: 70%;
+}
+
+.tab-button-text{
+  font-size: 0.9rem;
+}
+// .tabs-md .tab-button-text {
+//   font-size: 0.9rem !important;}
+//   .tabs-md[tabsHighlight=true] .tab-highlight {
+//     background: #c9942b;
+// }
+.blueefct {
+  filter: blur(5px) !important;
+}
+.popover-viewport{
+      margin-top: 7px !important;
+
+}
+.nodecor{
+  text-decoration: none;
+  color: black;
+}
+
+
+element.style  {
+top: 20px !important;
+left: 114px;
+}
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+border-bottom-color: #000000 !important;
+-webkit-box-shadow: inset 0 -1px 0 0 #000000 !important;
+box-shadow: inset 0 -1px 0 0 #000000 !important;
+}
+
+.item-md.item-input.ng-valid.item-input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner, .item-md.item-input.ng-valid.input-has-value:not(.input-has-focus):not(.item-input-has-focus) .item-inner {
+border-bottom-color: #000000;
+-webkit-box-shadow: inset 0 -1px 0 0 #000000;
+box-shadow: inset 0 -1px 0 0 #000000;
+}
+
+.alertCustomCss{
+background-color: rgb(255, 255, 255);
+color: rgb(12, 131, 6);
+text-align: center;
+
+button {
+   color: white !important; // button text color
+   color: color($colors, light, base) !important;
+   width: 100% !important;
+   text-align: center;
+       //button bg color
+       
+}
+.buttoncss{
+   background-color: #4CAF50;
+   border: none;
+   color: white;
+   padding: 15px 120px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+}
+.alert-head{
+   text-align: center !important;
+}
+.button-inner{
+   margin-right: 50px !important;
+   
+}
+.disable-hover alert-button alert-button-md buttoncss alert-button-default alert-button-default-md{
+   text-align: center !important;
+}
+.alert-button-group{
+   padding: 0px 10px 0px 10px !important;
+}
+
+}.alertCustomCss{
+background-color: rgba(255, 255, 255, 0);
+color: rgb(27, 27, 25);
+text-align: center;
+
+.buttoncss {
+   color: white !important; // button text color
+   background-color: rgb(190, 144, 16);
+   width: 100% !important;
+   text-align: center;
+   
+       
+}
+
+
+}
+// .loading-md .loading-wrapper {
+//   border-radius: 100%;
+//   width: 110px !important; 
+//   height: 110px !important;  
+//   background-color: rgba(219, 205, 15, 0)
+    
+
+
+// }  
+
+// .loading-md .loading-wrapper img{
+//   // border-radius: 100%;
+//   width: 100% !important; 
+//   // height: 64px !important;
+// }
+
+
+.md ion-menu[type=overlay] .menu-inner{
+//  border-radius: 50px;
+//  border-top-right-radius:50px;
+//  border-bottom-right-radius: 50px;
+}
+.popover-content{
+  top:0px !important;
+  margin-top: 10% !important;
+  left: 35% !important;
+}
+#cool{
+border-bottom: #d3cdcd 1px solid
+}
+.alert-head{
+background-color: #3856a6;
+color:white;
+
+}
+.alert-button{
+color:#3ea949 !important;
+border:1px solid #3ea949;
+}
+.toolbar-background toolbar-background-md{
+border-color: #b2b2b2;
+background: #f6882d;
+}
+.header-md{
+background-color: #f6882d !important;
+}
+.alert-md .alert-message, .alert-md .alert-input-group{
+padding: 24px 24px 24px;
+}

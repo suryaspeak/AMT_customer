@@ -1,0 +1,35 @@
+page-yettostartlist {
+
+    .item{
+        margin-bottom: 2%;
+        border: 0.5px solid black;
+       
+       
+      
+        }
+
+        .fst{
+            border: 0px solid black;
+            margin-bottom: 10px;
+            padding: 2px;
+        }
+        .fstcolor{
+            background-color: #3a54a3;
+            padding: 2px;
+            color: white;
+        }
+        p{
+            margin: 1px;
+            padding: 1px;
+            color: white !important;
+        }
+        .item-md{
+            padding-left: 0px;
+        }
+         .label-md{
+            margin: 0px !important;
+        }
+        .item-md.item-block .item-inner{
+            padding-right: 0px;
+        }
+}

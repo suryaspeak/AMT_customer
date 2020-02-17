@@ -1,0 +1,73 @@
+<ion-header  >
+
+    <ion-navbar color="light" hideBackButton>
+        <ion-buttons start>
+            <button ion-button icon-only clear  (click)="goBack()">
+              <ion-icon name="close"></ion-icon>
+            </button>
+          </ion-buttons>
+      <ion-title>Bar Chart</ion-title>
+   
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content >
+      <ion-row radio-group [(ngModel)]="month" (ionChange)="LoginRemCheck(rmchecked)">
+              
+          <ion-col>
+            <ion-item>
+              <ion-label>Last 3 Month</ion-label>
+              <ion-radio value="three"></ion-radio>
+            </ion-item>
+          </ion-col>
+          <ion-col>
+              <ion-item>
+                  <ion-label>Last 6 Month</ion-label>
+                  <ion-radio value="six"></ion-radio>
+                </ion-item>
+          </ion-col>
+       
+        </ion-row>
+     
+    
+  
+        <ion-card>
+            <ion-card-header>
+              MTBF
+            </ion-card-header>
+            <ion-card-content>
+              <canvas #MTBF></canvas>
+            </ion-card-content>
+          </ion-card>
+          <ion-card>
+              <ion-card-header>
+                  Physical Availability
+              </ion-card-header>
+              <ion-card-content>
+                <canvas #PAvailability></canvas>
+              </ion-card-content>
+            </ion-card>
+  
+            <ion-card>
+                <ion-card-header>
+                    Utilization
+                </ion-card-header>
+                <ion-card-content>
+                  <canvas #Utilization></canvas>
+                </ion-card-content>
+              </ion-card>
+  
+              <ion-card>
+                  <ion-card-header>
+                      Service Accuracy
+                  </ion-card-header>
+                  <ion-card-content>
+                    <canvas #SAccuracy></canvas>
+                  </ion-card-content>
+                </ion-card>
+     
+   
+  </ion-content>
+  

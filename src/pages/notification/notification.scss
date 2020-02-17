@@ -1,0 +1,33 @@
+page-notification {
+    
+p{
+    color:rgb(22, 21, 21) !important;
+    white-space: normal !important;
+    max-width: none !important;
+    width: 100%;
+    padding: 3px;
+    font-size: 17px;
+    
+    font-weight: bold;
+}
+
+  
+.label-md{
+    margin: 0px;
+}
+.time1{
+    // margin-bottom: 18% !important;
+    font-size: 14px;
+  }
+  
+  .item-md.item-block .item-inner{
+      padding-right: 0px;
+  }
+  .item-md{
+      padding-left: 0px;
+  }
+  .card-md {
+      padding: 5px;
+    background-color: #edf1f1 !important;
+}
+}

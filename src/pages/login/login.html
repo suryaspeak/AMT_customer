@@ -1,0 +1,35 @@
+
+
+<ion-content>
+  <div text-center class="logo">
+      <img src="assets/imgs/picblac1.jpg.png">
+  </div>
+   
+  <div class="center" ion-fixed>
+   
+    <!-- <img class="eco" src="assets/imgs/user.png"> -->
+    <div class="im">
+          <ion-item no-lines>
+            <ion-input type="email" placeholder="Email Input"  [(ngModel)]="email"></ion-input>
+            <ion-icon name="ios-contact" item-start></ion-icon>
+          </ion-item>
+
+          <ion-item no-lines>
+            <ion-input type="password" placeholder="*********"  [(ngModel)]="password"></ion-input>
+            
+            <ion-icon name="ios-lock" item-start></ion-icon>
+          </ion-item>
+          <!-- <p text-center>Forgot Password?</p> -->
+         
+        
+         <div text-center>
+          <button ion-button  color="selectbutton"  (click)="login()">Customer login</button>
+        </div>
+
+    </div>
+
+  </div>
+
+
+
+</ion-content>

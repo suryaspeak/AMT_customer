@@ -1,0 +1,71 @@
+page-tableview {
+
+ion-label {
+    white-space: normal !important;
+    max-width: none !important;
+     width: 50%;
+     font-size: 12px;
+   }
+//   ion-label{
+//       font-size: 12px;
+//   }
+   ion-row{
+       border: 1px solid grey;
+   }
+  ion-list{
+      border: 1px solid grey;
+      margin-top: 25px !important;
+  }
+    p
+    {
+        padding: 1px;
+        margin-bottom: 1px;
+        padding-top: 0.5px;
+        margin-top: 0px;
+        background-color:#f6882d;
+        color: white;
+    }
+ion-item[isOdd='true'] > div.item-content{
+    background-color: yellow !important;
+}
+
+ion-item[isOdd='false'] > div.item-content{
+    background-color: orange !important;
+}
+#bac:nth-child(even) {background: rgb(130, 176, 214)}
+#bac:nth-child(odd) {background: rgb(177, 174, 174)}
+[col-2]{
+    border:1px solid gainsboro;
+}
+[col-4]{
+    border:1px solid gainsboro;
+}
+.branchRow{
+    background-color: #caaa6ea8;
+    
+}
+.siteRow{
+    background-color: rgba(255, 99, 132, 0.2);
+}
+.fleetRow{
+    color:rgb(78, 75, 75);
+    background-color: rgba(54, 162, 235, 0.2);
+}
+.equipmentRow{
+    // 'rgba(255, 99, 132, 0.2)',
+    // 'rgba(54, 162, 235, 0.2)',
+    // 'rgba(255, 206, 86, 0.2)',
+    // 'rgb(153, 224, 255)',
+    // 'rgb(179, 255, 238)',
+    // 'rgb(255, 228, 241)',
+    color:rgb(31, 30, 30);
+    background-color: rgba(252, 255, 99, 0.2);
+}
+h5{
+    text-transform: uppercase;
+}
+.gap{
+    width:100%;
+    height: 5px;;
+}
+}

@@ -1,0 +1,56 @@
+<ion-header >
+    
+  <ion-navbar color='velvet'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+       
+    </button>
+    <ion-title text-center> <img class="logo" src="../assets/imgs/Gainwell-logo-with-TM-sign.png"></ion-title>
+    <ion-buttons end  (click)="notification()">
+        <button  id="cart-btn" ion-button clear>
+                <ion-icon style="font-size:25px;"  name="ios-notifications">
+                  <ion-badge id="notifications-badge" id="cart-badge" color="danger">{{count}}</ion-badge>
+                </ion-icon>              
+            </button>
+  </ion-buttons>
+
+
+    <ion-buttons end>
+        <button ion-button icon-only (click)="doConfirm()">
+            <ion-icon  ios="ios-exit" md="ios-exit-outline"></ion-icon>
+        </button>
+      </ion-buttons>
+     
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+ <div class="slider">
+  <ion-slides loop autoplay=3000 *ngIf="banner && banner.length>0">
+    <ion-slide *ngFor="let item of banner">
+    <img class="baner" src="{{item.image}}">
+    </ion-slide>
+ 
+  </ion-slides>
+ </div>
+   <ion-row text-center>
+    <div color="secondary" class="amt" >
+     <P>Asset Managment & Tracking</P>
+    </div>
+  </ion-row> 
+    <ion-row  text-center>
+      <ion-col col-6   *ngFor="let item of data" (click)="dashboard(item.id)">
+        <div class="colm">
+            <img class="icon2" src="{{item.image}}">
+            <h2 text-center>{{item.name}}</h2>
+        </div>
+      
+    </ion-col>
+     
+
+     
+    </ion-row>
+  
+
+  
+</ion-content>

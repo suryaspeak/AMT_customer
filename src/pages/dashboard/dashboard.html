@@ -1,0 +1,80 @@
+<!--
+  Generated template for the DashboardPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='light'>
+      <ion-buttons right>
+          <button ion-button icon-only color="velvet" (click)="openPopover($event)">
+              <ion-icon name="more"></ion-icon>
+          </button>
+        </ion-buttons>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+           
+        </button>
+    <ion-title>Dashboard</ion-title>
+
+  </ion-navbar>
+ 
+</ion-header>
+
+
+<ion-content>
+    <!-- <ion-row radio-group [(ngModel)]="month" (ionChange)="LoginRemCheck(rmchecked)">
+            
+        <ion-col>
+          <ion-item>
+            <ion-label>Last Month</ion-label>
+            <ion-radio value="three"></ion-radio>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+            <ion-item>
+                <ion-label>MTD</ion-label>
+                <ion-radio value="six"></ion-radio>
+              </ion-item>
+        </ion-col>
+     
+      </ion-row> -->
+    
+      <h5 text-center>Time: {{month}}, Analysed By: {{timeHeaderName}}  </h5>
+              <ion-card >
+                <ion-card-header>
+                MTBF
+                </ion-card-header>
+                <ion-card-content>
+                  <canvas #MTBF></canvas>
+                </ion-card-content>
+              </ion-card>
+    
+              <ion-card >
+                  <ion-card-header>
+                      Physical Availability 
+                  </ion-card-header>
+                  <ion-card-content>
+                    <canvas #PAvailability></canvas>
+                  </ion-card-content>
+                </ion-card>
+
+                <ion-card >
+                    <ion-card-header>
+                        Utilization
+                    </ion-card-header>
+                    <ion-card-content>
+                      <canvas #Utilization></canvas>
+                    </ion-card-content>
+                  </ion-card>
+                
+                <ion-card >
+                    <ion-card-header>
+                        Service Accuracy 
+                    </ion-card-header>
+                    <ion-card-content>
+                      <canvas #SAccuracy></canvas>
+                    </ion-card-content>
+                  </ion-card>
+</ion-content>

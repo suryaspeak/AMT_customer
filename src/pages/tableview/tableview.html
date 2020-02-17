@@ -1,0 +1,331 @@
+<!--
+  Generated template for the TableviewPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="light">
+    <ion-buttons right>
+      <button ion-button icon-only color="velvet" (click)="openPopover($event)">
+        <ion-icon name="more"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>  Table View</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+       
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+  <ion-row style="background-color:rgb(255, 255, 255) !important;margin-bottom: 55%" ion-fixed text-center>
+    <ion-col col-12 text-center>
+      <h5 text-center>Time: {{timeHeaderName}},  Analysed By: {{analysidSelection}}</h5>
+    </ion-col>
+    <ion-col col-12 text-center>
+      <p text-center>legent</p>
+    </ion-col>
+    <ion-col col-3 class="branchRow"> Branch
+    </ion-col>
+    <ion-col col-3 class="siteRow">
+      Site
+    </ion-col>
+    <ion-col col-3 class="fleetRow">Fleet </ion-col>
+    <ion-col col-3 class="equipmentRow"> Equipment </ion-col>
+  <!-- </ion-row> -->
+  <div class="gap">
+
+  </div>
+    <!-- <ion-row ion-fixed > -->
+      <ion-col col-4 text-center >
+        <b>Name</b>
+      </ion-col>
+
+      <ion-col col-2 text-center >
+        <b>MTBF</b>
+      </ion-col>
+
+
+      <ion-col col-2 text-center >
+        <b>Ph.Avl</b>
+      </ion-col>
+
+
+      <ion-col col-2 text-center >
+        <b>Util</b>
+      </ion-col>
+      <ion-col col-2 text-center >
+        <b>Svc. Acc</b>
+      </ion-col>
+    </ion-row>
+  <div style="margin-top:47%">
+    <div *ngIf="analysidSelection=='all'" >
+
+
+      <div *ngFor="let item of kpiData">
+
+
+        <ion-row class="branchRow" text-center>
+
+          <ion-col col-4>
+            {{item.branch}}
+          </ion-col>
+
+          <ion-col col-2>
+            {{item.mtbf}}
+          </ion-col>
+
+
+          <ion-col col-2>
+            {{item.physical_availibity}}
+          </ion-col>
+
+
+          <ion-col col-2>
+            {{item.utilization}}
+          </ion-col>
+          <ion-col col-2>
+            {{item.service_acuracy}}
+          </ion-col>
+        </ion-row>
+        <div *ngIf="item.site.length>0">
+
+
+          <div *ngFor="let siteItem of item.site ">
+
+            <ion-row class="siteRow" text-center>
+
+              <ion-col col-4>
+                {{siteItem.site}}
+              </ion-col>
+
+              <ion-col col-2>
+                {{siteItem.mtbf}}
+              </ion-col>
+
+
+              <ion-col col-2>
+                {{siteItem.physical_availibity}}
+              </ion-col>
+
+
+              <ion-col col-2>
+                {{siteItem.utilization}}
+              </ion-col>
+              <ion-col col-2>
+                {{siteItem.service_acuracy}}
+              </ion-col>
+            </ion-row>
+
+            <div *ngIf="siteItem.fleet.length>0">
+
+              <div *ngFor="let fleetdata of siteItem.fleet">
+
+                <ion-row class="fleetRow" text-center>
+
+                  <ion-col col-4>
+                    {{fleetdata.fleet}}
+                  </ion-col>
+
+                  <ion-col col-2>
+                    {{fleetdata.mtbf}}
+                  </ion-col>
+
+
+                  <ion-col col-2>
+                    {{fleetdata.physical_availibity}}
+                  </ion-col>
+
+
+                  <ion-col col-2>
+                    {{fleetdata.utilization}}
+                  </ion-col>
+                  <ion-col col-2>
+                    {{fleetdata.service_acuracy}}
+                  </ion-col>
+                </ion-row>
+
+
+                <div *ngIf="fleetdata.equipment.length>0">
+                  <div *ngFor="let equipmentData of fleetdata.equipment">
+
+                    <ion-row class="equipmentRow" text-center>
+
+                      <ion-col col-4>
+                        {{equipmentData.equipment}}
+                      </ion-col>
+
+                      <ion-col col-2>
+                        {{equipmentData.mtbf}}
+                      </ion-col>
+
+
+                      <ion-col col-2>
+                        {{equipmentData.physical_availibity}}
+                      </ion-col>
+
+
+                      <ion-col col-2>
+                        {{equipmentData.utilization}}
+                      </ion-col>
+                      <ion-col col-2>
+                        {{equipmentData.service_acuracy}}
+                      </ion-col>
+                    </ion-row>
+
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- branch records -->
+
+
+    <div *ngIf="analysidSelection=='branch'">
+
+
+      <div *ngFor="let item of kpiData">
+
+
+        <ion-row class="branchRow" text-center>
+
+          <ion-col col-4>
+            {{item.branch}}
+          </ion-col>
+
+          <ion-col col-2>
+            {{item.mtbf}}
+          </ion-col>
+
+
+          <ion-col col-2>
+            {{item.physical_availibity}}
+          </ion-col>
+
+
+          <ion-col col-2>
+            {{item.utilization}}
+          </ion-col>
+          <ion-col col-2>
+            {{item.service_acuracy}}
+          </ion-col>
+        </ion-row>
+      </div>
+    </div>
+
+
+    <!-- siteView -->
+
+    <div *ngIf="analysidSelection=='site'">
+      <div *ngFor="let item of kpiData"> 
+
+
+      <div *ngIf="item.site.length>0">
+
+
+        <div *ngFor="let siteItem of item.site ">
+
+          <ion-row class="siteRow" text-center>
+
+            <ion-col col-4>
+              {{siteItem.site}}
+            </ion-col>
+
+            <ion-col col-2>
+              {{siteItem.mtbf}}
+            </ion-col>
+
+
+            <ion-col col-2>
+              {{siteItem.physical_availibity}}
+            </ion-col>
+
+
+            <ion-col col-2>
+              {{siteItem.utilization}}
+            </ion-col>
+            <ion-col col-2>
+              {{siteItem.service_acuracy}}
+            </ion-col>
+          </ion-row>
+        </div>
+      </div>
+
+    </div> 
+    </div>
+
+    <!-- fleet -->
+    
+    <div *ngIf="analysidSelection=='fleet'">
+
+
+        <div *ngFor="let item of kpiData">
+  
+  
+        
+          <div *ngIf="item.site.length>0">
+  
+  
+            <div *ngFor="let siteItem of item.site ">
+  
+           
+  
+              <div *ngIf="siteItem.fleet.length>0">
+  
+                <div *ngFor="let fleetdata of siteItem.fleet">
+  
+                  <ion-row class="fleetRow" text-center>
+  
+                    <ion-col col-4>
+                      {{fleetdata.fleet}}
+                    </ion-col>
+  
+                    <ion-col col-2>
+                      {{fleetdata.mtbf}}
+                    </ion-col>
+  
+  
+                    <ion-col col-2>
+                      {{fleetdata.physical_availibity}}
+                    </ion-col>
+  
+  
+                    <ion-col col-2>
+                      {{fleetdata.utilization}}
+                    </ion-col>
+                    <ion-col col-2>
+                      {{fleetdata.service_acuracy}}
+                    </ion-col>
+                  </ion-row>
+  
+  
+                
+  
+                </div>
+  
+              </div>
+  
+  
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </div>    
+</ion-content>

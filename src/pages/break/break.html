@@ -1,0 +1,79 @@
+<!--
+  Generated template for the BreakPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header >
+    
+    <ion-navbar color='light'>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+         
+      </button>
+      <ion-title > BreakDown</ion-title>
+     
+       
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content >
+  <ion-card>
+      <ion-item>
+          <ion-label>Site<span style="color:red">*</span></ion-label>
+          <ion-select >
+            <ion-option value={{item.SiteId}} *ngFor="let item of name" (ionSelect)="onChange(item.SiteId)">{{item.Site}}</ion-option>
+          
+          </ion-select>
+        </ion-item>
+  </ion-card>
+  <ion-card>
+      <ion-item>
+          <ion-label>Location</ion-label>
+          <ion-select >
+            <ion-option value={{item.EqpPlan}} *ngFor="let item of locaiton" (ionSelect)="loc(item.Work_Location_ID)">{{item.Description}}</ion-option>
+       
+          </ion-select>
+       </ion-item>
+  </ion-card>
+<ion-card>
+    <ion-item>
+        <ion-label>Equipment<span style="color:red">*</span></ion-label>
+        <ion-select >
+          <ion-option value={{item.EqpPlanId}} *ngFor="let item of sub" (ionSelect)="onset(item.EqpPlanId,item.EqpPlan)">{{item.EqpPlan}}</ion-option>
+     
+        </ion-select>
+     </ion-item>
+</ion-card>
+ 
+ 
+  
+     <ion-card>
+        <ion-item>
+            <ion-textarea placeholder="Enter a description" [(ngModel)]="desc"></ion-textarea>
+          </ion-item>
+     </ion-card>
+          
+           
+              <!-- <p><ion-icon ios="ios-disc" md="md-disc"></ion-icon>Breakdown % (#) : Number of Events where Breakdown = True / Total Number of Events
+              </p>
+              <p><ion-icon ios="ios-disc" md="md-disc"></ion-icon>Equipment Currently Down : (Number of Equipment Currently Down / Number of Equipment) * 100
+              </p>
+              <p><ion-icon ios="ios-disc" md="md-disc"></ion-icon>MTTR (#) : Total Downtime for the events / Total number of events
+              </p>
+              <p><ion-icon ios="ios-disc" md="md-disc"></ion-icon>Reliability (MTBS) : Total Usage of the Equipment  / Total Number of Events
+              </p>
+              <p><ion-icon ios="ios-disc" md="md-disc"></ion-icon>Service Accuracy (#) : Number of services (PM Events) within the allowed Tolerance for a PM / Total Number of PM Events (Tolerance is set using Fleet Administration)
+              </p>
+              <p><ion-icon ios="ios-disc" md="md-disc"></ion-icon>Utilization : Usage / Number of Equipment
+              </p>
+              <p><ion-icon ios="ios-disc" md="md-disc"></ion-icon>Strategy Tasks – Overdue: (Number of Strategy Tasks Overdue / Number of Strategy Tasks) * 100.  Note: Only strategy tasks which are flagged as planning tasks are considered in this statistic
+              </p>
+            -->
+            <div text-center>
+   
+              <button ion-button  round color="secondary" (click)="submit()">Submit</button>
+            </div>
+           
+</ion-content>

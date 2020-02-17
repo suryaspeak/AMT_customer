@@ -1,0 +1,62 @@
+<!--
+  Generated template for the AssetsdetilsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="light">
+    <ion-title>Asset Details</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+       
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+
+  <ion-card *ngIf="status=='UP'" >
+  <ul>
+    <li><b>Branch Name UP :</b> <p>{{branchname}}</p> </li>
+    <li><b>Site Name :</b>  <p>{{equ}}</p></li>
+    <div >
+      <li><b>Equipment Name :</b>  <p>{{eqp_name}}</p></li>
+      <li><b>Model Number :</b>  <p>{{modelno}}</p></li>
+      <li><b>Serial Number : </b> <p>{{serial}}</p> </li>
+      <li><b>Manufacturer : </b> <p>{{mani}}</p></li>
+      <li><b>Date of Commissioning :</b>  <p>{{OriginalCommissionDate | date: 'dd/MM/yyyy'}}</p></li>
+
+      <!-- <li>Event description :  <p>{{evdesc}}</p></li>
+      <li>Actual Down Time :  <p>{{dntime}}</p></li> -->
+      
+    </div>
+  </ul>
+</ion-card>
+
+
+<ion-card *ngIf="status=='DOWN'">
+    <ul>
+      <li><b>Branch Name :</b> <p>{{branchname}}</p> </li>
+      <li><b>Site Name :</b>  <p>{{equ}}</p></li>
+     
+        <li><b>Equipment Name :</b>  <p>{{eqp_name}}</p></li>
+        <li><b>Model Number :</b>  <p>{{modelno}}</p></li>
+        <li><b>Serial Number : </b> <p>{{serial}}</p> </li>
+        <li><b>Manufacturer :</b>  <p>{{mani}}</p></li>
+        <li><b>Date of Commissioning : </b> <p>{{OriginalCommissionDate | date: 'dd/MM/yyyy'}}</p></li>
+    </ul>
+    <ul class="down">
+        <li><b>Event Description :</b>  <p>{{evdesc}}</p></li>
+        <li><b>Actual Down Time : </b> <p>{{dntime}}</p></li>
+        <li><b>Expected Up Time :</b><p>{{Expected_Up_Time}}</p></li>
+        <li><b>Assigned Engineer :</b><p>{{engnieer_name}}</p></li>
+     
+    </ul>
+  </ion-card>
+
+
+</ion-content>

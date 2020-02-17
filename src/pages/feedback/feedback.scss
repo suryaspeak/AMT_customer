@@ -1,0 +1,47 @@
+page-feedback {
+     .item{
+         border:1px gray solid;
+         margin-bottom: 5px;
+         }
+         ul {
+           text-align: center;
+             padding: 0px;
+           
+             &.rating li {
+               padding: 5px 10px !important;
+               background: none;
+               color: blue;
+           
+               ion-icon {
+                 font-size: 30px;
+               }
+             }
+          }
+           .card{
+          
+             margin-bottom: 4px;
+             }
+             ion-textarea {
+               margin-top: 5px;
+             }
+             .item p{
+               margin-bottom: 8px;
+             }
+
+            .tab:nth-child(even) {
+              background: #919fcd9d;
+            }
+            .tab:nth-child(odd) {
+              background: rgba(251, 185, 134, 0.596);
+            }
+
+            .item-md {
+              background: transparent;
+            }
+            p{
+              color:red !important;
+            }
+            h3{
+              font-size: 1.2em;
+            }
+}

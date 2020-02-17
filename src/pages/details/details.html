@@ -1,0 +1,58 @@
+<!--
+  Generated template for the DetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='light'>
+    <ion-title>My Event</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+       
+    </button>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+
+    <!-- <div class="fst" *ngFor="let tag of table; let i=index; "> -->
+
+        <!-- <p> <span class="fstcolor">{{getObjectKey(tag)}}</span> </p> -->
+
+     
+          <ion-card *ngFor="let subitem of table; let j=index;" style="margin-bottom:2%" 
+          (click)="eventdetails(subitem.EqpPlanId, subitem.Event_ID, subitem.Event_Status_ID)">
+          
+                 <div style="background-color:rgba(54, 162, 235, 0.2) !important;width: 100%" padding *ngIf="subitem.event_status=='Completed'">
+                  <h6>Equipment: {{subitem.EqpPlan}}</h6>
+      
+                  <h6 > Description: <b style="white-space: initial;">{{subitem.Event_description}}</b></h6>
+                  <p  text-end >{{subitem.Actual_Down_Time}}</p>
+                
+                 </div>
+              <div style="background-color:rgba(255, 99, 132, 0.2) !important;width: 100%" padding *ngIf="subitem.event_status=='in Progress'">
+                  <h6>Equipment: {{subitem.EqpPlan}}</h6>
+      
+                  <h6 > Description: <b style="white-space: initial;">{{subitem.Event_description}}</b></h6>
+                  <p  text-end >{{subitem.Actual_Down_Time }}</p>
+                  <!-- <p  text-end >{{subitem.Actual_Down_Time | date: "dd/MM/yyyy"}}</p> -->
+              </div>
+             
+          </ion-card>
+      
+
+       
+        <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+          <ion-infinite-scroll-content loadingText="Loading your leads..." *ngIf="pagingEnabled"></ion-infinite-scroll-content>
+      </ion-infinite-scroll> 
+     <div *ngIf="!pagingEnabled"> No more data is available.</div>
+
+    <!-- </div> -->
+
+  
+</ion-content>
